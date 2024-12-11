@@ -3,6 +3,7 @@ import placeholder from "../../assets/imgs/placeholder.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
+import DeleteButton from "../deletebutton/DeleteButton";
 const tagColors = {
     html: style.red,
     css: style.blue,
@@ -25,7 +26,7 @@ export default function ({ postId, title = "", image, content = "", tags = [], U
                 <p>{content}</p>
                 <div className={style.lower_card}>
                     <Link to={`/blog/${postId}`}>maggiori informazioni</Link>
-                    <button className={style.btn_form} onClick={onClick}><FontAwesomeIcon icon={faTrash} /></button>
+                    <DeleteButton postID={postId} URI={URI} />
                 </div>
             </div>
         </div>

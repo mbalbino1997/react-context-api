@@ -24,6 +24,7 @@ export default function IndexPost() {
                                 content={post.content}
                                 tags={post.tags}
                                 postId={post.id}
+                                onClick={fetchData}
                             />
                         </div>
                     )

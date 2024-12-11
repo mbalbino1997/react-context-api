@@ -1,0 +1,77 @@
+.btn_slide {
+    background-color: #241e1ed7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col_6 {
+    width: 50%;
+}
+
+.col_12 {
+    width: 100%;
+}
+
+.btn_slide:hover {
+    background-color: #0a0909d7;
+    transform: scale(1.1);
+}
+
+.img_detail {
+    width: 300px;
+    aspect-ratio: 1/1;
+}
+
+
+
+.back {
+    background-color: #f1f1f1;
+    /* Colore di sfondo chiaro per contrastare con il blu scuro */
+    color: #05497a;
+    /* Colore del testo blu scuro che si abbina al tuo background */
+    border: 2px solid #05497a;
+    /* Bordo che segue il colore del testo */
+    padding: 12px 24px;
+    /* Distanza interna per dare un aspetto più grande e cliccabile */
+    text-align: center;
+    /* Allinea il testo al centro */
+    font-size: 16px;
+    /* Dimensione del testo */
+    border-radius: 8px;
+    /* Angoli arrotondati per un aspetto più moderno */
+    cursor: pointer;
+    /* Cambia il cursore al passaggio sopra per indicare che è cliccabile */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    /* Transizione fluida per il cambio di colore e l'ingrandimento */
+}
+
+.back:hover {
+    background-color: #05497a;
+    /* Cambia il colore di sfondo al passaggio sopra */
+    color: #fff;
+    /* Cambia il colore del testo a bianco */
+    transform: scale(1.05);
+    /* Leggero ingrandimento al passaggio sopra */
+}
+
+.back:focus {
+    outline: none;
+    /* Rimuove il bordo di focus, se non lo desideri */
+    box-shadow: 0 0 10px rgba(5, 73, 122, 0.5);
+    /* Aggiungi un'ombra leggera quando il bottone è selezionato */
+}
