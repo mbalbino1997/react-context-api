@@ -1,22 +1,11 @@
 import Card from "../../components/card/Card.jsx"
 import style from "./Index.post.module.css"
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useEffect, useContext } from "react";
+import PostsListContext from "../../contexts/PostsListContext.jsx";
 export default function IndexPost() {
-    const [postsArray, setPostsArray] = useState([]);
+    const { postsArray, fetchData } = useContext(PostsListContext);
+    const BASE_URI = "http://localhost:3000";
 
-    const BASE_URI = "http://localhost:3000"
-
-
-    function fetchData() {
-        axios.get(`${BASE_URI}/posts`)
-            .then((res) => {
-                setPostsArray(res.data)
-            })
-            .catch((err) => {
-                console.error(err.message);
-            })
-    }
     useEffect(() => {
         fetchData()
     }, [])

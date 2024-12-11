@@ -7,23 +7,23 @@ import ShowPost from './pages/show.post/ShowPost.jsx'
 import './App.css'
 import { useState } from 'react'
 import PostsListContext from './contexts/PostsListContext.jsx'
+import axios from "axios";
 export default function App() {
   const [postsArray, setPostsArray] = useState([]);
+  const BASE_URI = "http://localhost:3000";
   function fetchData() {
     axios
-      .get(`${BASE_URI}/posts/${id}`)
+      .get(`${BASE_URI}/posts`)
       .then((res) => {
-        console.log(res.data)
-        setPost(res.data);
+        setPostsArray(res.data);
       })
       .catch((err) => {
         console.error(err.message);
-        setPost(null);
       });
   }
 
   return (
-    <PostsListContext.Provider value={{ postsArray, setPostsArray }}>
+    <PostsListContext.Provider value={{ postsArray, setPostsArray, fetchData }}>
 
       <BrowserRouter>
         <Routes>
